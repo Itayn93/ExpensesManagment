@@ -1,0 +1,69 @@
+extends layout
+
+block content
+
+    h1 #{title}
+    h2 Please enter your credentials:
+
+
+    form(role='form' method='POST' action='')
+        table.table.table-striped
+            tbody
+                tr
+                    td
+                        label Username:
+                        input(type='text', placeholder='Enter Username' , name='userName')
+                tr
+                    td
+                        label Password:
+                        input(type='text', placeholder='Enter Password', name='password')
+                tr
+                    td
+                        button(type="submit") Submit
+                        a(href="/homePage")
+                tr
+                    td
+                        button(type="signup") Sign-Up
+                        a(href="/signUp")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

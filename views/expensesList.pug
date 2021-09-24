@@ -1,0 +1,42 @@
+extends layout
+
+block content
+
+    h1 #{title}
+
+
+    form(role='form' method='POST' action='')
+        table.table.table-striped
+            tbody
+                tr
+                    td
+                        label Month:
+                        input(type='text', name='month')
+                    td
+                        label Year:
+                        input(type='text', name='year')
+                    td
+                        button(type="submit") Submit
+    //if Data == null
+    if Data != null && Data.length === 0
+        h2 No expenses for #{Month}/#{Year}
+    else if Data != null
+        h2 Monthly Report for #{Month}/#{Year}
+        table.table.table-striped
+            thead
+                tr
+                    th Category
+                    th Description
+                    th Sum
+                    th Date
+
+                //tr
+            //thead
+            tbody
+            each row in Data
+                tr
+                    td=  row.Category
+                    td=  row.Description
+                    td=  row.Sum
+                    td=  row.Date
+

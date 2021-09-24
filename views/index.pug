@@ -1,0 +1,21 @@
+//extends layout
+//
+//block content
+//  h1= title
+//  p What would you like to do ?
+
+head
+  meta(charset='utf-8')
+  title Title2
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css')
+
+  body
+    h1= title
+    p What Would You Like To Do:
+    ul
+      li
+        a(href="/expenses") Monthly Report
+      li
+        a(href="/expenses/addExpense") Add New Expense
+      li
+        a(href="/userProfile") Edit User Profile

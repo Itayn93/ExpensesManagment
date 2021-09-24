@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+    h1 #{title}
+    h2 What Would You Like To Change ?
+    //p Welcome to #{title}
+    //textarea Enter Month:
+    //textarea Enter Year:
+
+    form(role='form' method='POST' action='')
+        table.table.table-striped
+            tbody
+                tr
+                    td
+                        label Full Name:
+                        input(type='text', value= userInfo.Fullname , name='fullName')
+                tr
+                    td
+                        label UserName:
+                        input(type='text', value= userInfo.Username , name='userName')
+                tr
+                    td
+                        label Password:
+                        input(type='text', value= userInfo.Password, name='password')
+                tr
+                    td
+                        label UserId:
+                        input(type='text', value= userInfo.UserId, name='userId')
+                tr
+                    td
+                        label Birthday:
+                        input(type='text', value= birthday, name='birthday')
+                tr
+                    td
+                        label Maritalstatus:
+                        input(type='text', value= userInfo.Maritalstatus, name='maritalStatus')
+                tr
+                    td
+                        button(type="submit") Submit Changes

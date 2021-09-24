@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+    h1 #{title}
+    //p Welcome to #{title}
+    //textarea Enter Month:
+    //textarea Enter Year:
+
+    form(role='form' method='POST' action='')
+        table.table.table-striped
+            tbody
+                tr
+                    td
+                        label Category:
+                        input(type='text', name='Category')
+                    td
+                        label Description:
+                        input(type='text', name='Description')
+                    td
+                        label Sum:
+                        input(type='text', name='Sum')
+                    td
+                        button(type="submit") Submit
