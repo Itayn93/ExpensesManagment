@@ -14,7 +14,8 @@ router.post('/', async function(req, res, next) {
 
     const currentUser = await User.findOne({Username:req.body.userName,Password:req.body.password});
     if(currentUser){
-        res.render('index', { title: 'Welcome To Expense Manager' });
+        res.redirect('index');
+        //res.render('index', { title: 'Welcome To Expense Manager' });
     } else{
         res.render('error', { message: 'No Such User In DB !' });
     }
